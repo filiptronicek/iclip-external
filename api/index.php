@@ -43,11 +43,16 @@ switch ($ext) {
 
     case "png":
         $headerContent = "image/png";
+        break;
     
     case "jpg":
         $headerContent = "image/jpeg";
-    
+        break;
+    case "svg":
+        $headerContent = "image/svg+xml";
+        break;
+
 }
 
-header("Content-type: image/{$ext}");
+header("Content-type: {$headerContent}");
 echo $data;
