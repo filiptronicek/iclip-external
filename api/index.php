@@ -2,7 +2,7 @@
 
 $url = $_GET['url'];
 
-if (isset($url)) { 
+if (!isset($url)) { 
         echo "You have to specify a URL"; 
 } else {
 
