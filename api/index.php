@@ -9,7 +9,10 @@ $ext = end($ext);
 
 $headerContent = "";
 
-switch ($ext) {
+if (isset($url)) { 
+        echo "You have to specify a URL"; 
+} else {
+    switch ($ext) {
 
     /* Application */
 
@@ -23,7 +26,7 @@ switch ($ext) {
 
     case "ogg":
         $headerContent = "application/ogg";
-        break;  
+        break;
 
     case "json":
         $headerContent = "application/json";
@@ -54,5 +57,6 @@ switch ($ext) {
 
 }
 
-header("Content-type: {$headerContent}");
-echo $data;
+    header("Content-type: {$headerContent}");
+    echo $data;
+}
