@@ -8,6 +8,10 @@
       {
         "src": "/image",
         "dest": "/api"
+      },
+      {
+        "src": "/",
+        "dest": "/api?url=https://thc.now.sh/r/ProgrammerHumour"
       }
     ]
   }
