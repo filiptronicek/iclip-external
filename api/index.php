@@ -2,16 +2,17 @@
 
 $url = $_GET['url'];
 
-$data = file_get_contents($url);
-
-$ext = explode(".", $url);
-$ext = end($ext);
-
-$headerContent = "";
-
 if (isset($url)) { 
         echo "You have to specify a URL"; 
 } else {
+
+    $data = file_get_contents($url);
+
+    $ext = explode(".", $url);
+    $ext = end($ext);
+
+    $headerContent = "";
+
     switch ($ext) {
 
     /* Application */
