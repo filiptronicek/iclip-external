@@ -13,7 +13,9 @@ async function handleRequest(request) {
 
   queryString.forEach(item => {
     const kv = item.split('=');
-    if (kv[0]) params[kv[0]] = kv[1] || true;
+    if (kv[0]) {
+      params[kv[0]] = kv[1] || true;
+    }
   });
   console.log(params);
 
